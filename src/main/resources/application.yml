@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/movies
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+base:
+  url: "http://localhost:8080"
