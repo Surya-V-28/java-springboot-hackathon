@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // You can redirect or clear the form here if needed
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.log(error);
                 alert(error.message); // Show error message to user
             });
     });

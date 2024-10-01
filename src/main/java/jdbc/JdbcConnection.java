@@ -1,4 +1,4 @@
-package jdbc;
+/*package jdbc;
 
 import java.sql.*;
 
@@ -60,4 +60,4 @@ public class JdbcConnection {
             e.printStackTrace();
         }
     }
-}
+}*/
