@@ -14,7 +14,7 @@ import java.util.List;
 public class UserService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    // Method to create the user table on application startup
+    // Method to create the user table on application startup working
     @PostConstruct
     public void init() {
         String createTableSQL = "CREATE TABLE IF NOT EXISTS users (" +
