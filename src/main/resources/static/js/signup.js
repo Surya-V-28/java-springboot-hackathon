@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.querySelector('section');
     signupForm.style.opacity = 0;
-
     setTimeout(() => {
         signupForm.style.transition = 'opacity 1s ease-in-out';
         signupForm.style.opacity = 1;
     }, 500);
-
     const signupButton = document.getElementById('submit'); // Get the button by ID
     signupButton.addEventListener('click', function (event) {
         event.preventDefault();  // Prevent default form submission
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send data to backend on port 4000
-        fetch('http://localhost:4000/req/signup', {
+        fetch('http://localhost:8080/req/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -12,11 +12,10 @@ import java.util.List;
 
 @Service
 public class UserService {
-
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
     // Method to create the user table on application startup
+    @PostConstruct
     public void init() {
         String createTableSQL = "CREATE TABLE IF NOT EXISTS users (" +
                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
