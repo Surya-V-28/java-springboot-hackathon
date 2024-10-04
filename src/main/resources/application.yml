@@ -1,6 +1,6 @@
 
 server:
-  port: 4000
+  port: 8080
   error:
     include-message: always
     include-binding-errors: always
@@ -8,8 +8,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/regschema
     username: root
-    password: Thina9677@
-
+    password: Surya@Sql231
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jdbc:
     initialize-schema: always
   servlet:
