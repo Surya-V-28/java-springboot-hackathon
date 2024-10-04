@@ -17,6 +17,10 @@ public class ContentController {
     public String signup(){
         return "signup";
     }
+    @GetMapping("/")
+    public String root() {
+        return "login"; // Return the name of the view (e.g., "index.html")
+    }
     @GetMapping("/index")
     public String home(){
         return "index";

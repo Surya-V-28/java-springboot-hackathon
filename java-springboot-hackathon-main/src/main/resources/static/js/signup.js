@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send data to backend on port 4000
-        fetch('http://localhost:8080/req/signup', {
+        fetch('http://localhost:4000/req/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 alert('Signup successful!');
                 console.log(data);  // Optional: Log the server response
-                // You can redirect or clear the form here if needed
+                window.location.href = '/req/login';
             })
             .catch(error => {
                 console.log(error);
