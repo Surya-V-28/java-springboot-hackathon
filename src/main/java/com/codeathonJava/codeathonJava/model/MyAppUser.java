@@ -7,6 +7,19 @@ public class MyAppUser {
     private String username;
     private String email;
     private String password;
+    private  boolean is_verified;
+
+    public boolean isIs_verified() {
+        return is_verified;
+    }
+
+    public void setIs_verified(boolean is_verified) {
+        this.is_verified = is_verified;
+    }
+
+    public  boolean getIs_verified(){
+        return is_verified;
+    }
 
     // Getters and setters
     public Integer getId() {

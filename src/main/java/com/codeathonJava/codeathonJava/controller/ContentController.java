@@ -21,5 +21,9 @@ public class ContentController {
     public String home(){
         return "index";
     }
+    @GetMapping("/")
+    public String root() {
+        return "login"; // Return the name of the view (e.g., "index.html")
+    }
 
 }
