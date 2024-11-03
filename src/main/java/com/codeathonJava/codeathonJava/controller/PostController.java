@@ -31,6 +31,7 @@ public class PostController {
     @PostMapping(value = "/signup", consumes = "application/json", produces = "application/json")
     public ResponseEntity<MyAppUser> createUser(@RequestBody MyAppUser user) {
         System.out.println("Received User: " + user);
+
         userService.saveUser(user); // Save user using UserService
         Integer givenId = userService.findUserIdByEmail(user.getEmail());
         if (givenId == 0) {
@@ -47,10 +48,13 @@ public class PostController {
 
     @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> loginUser(@RequestBody LoginEntity loginRequest) {
+
         boolean isValidUser = userService.verifyUserCredentials(loginRequest.getUsername(), loginRequest.getPassword());
+        System.out.println("this is the got user form the place " + isValidUser);
         if (isValidUser) {
             return new ResponseEntity<>("Login successful", HttpStatus.OK);
         } else {
+
             return new ResponseEntity<>("Invalid credentials", HttpStatus.UNAUTHORIZED);
         }
     }

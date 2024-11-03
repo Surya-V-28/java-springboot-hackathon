@@ -23,7 +23,7 @@ public class ContentController {
     }
     @GetMapping("/")
     public String root() {
-        return "login"; // Return the name of the view (e.g., "index.html")
+        return "hello worlds"; // Return the name of the view (e.g., "index.html")
     }
 
 }

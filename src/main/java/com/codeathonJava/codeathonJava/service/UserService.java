@@ -107,16 +107,13 @@ public class UserService {
 
     public boolean verifyUserCredentials(String username, String rawPassword) {
         Optional<MyAppUser> optionalUser = findByUsername(username);
+        System.out.println("this is the user of the person "+ optionalUser);
         if (optionalUser.isPresent()) {
             MyAppUser user = optionalUser.get();
             return rawPassword.equals(user.getPassword()); // Simple string comparison
         }
         return false; // User not found
     }
-
-
-
-
 
     public List<MyAppUser> getAllUsers() {
         String selectSQL = "SELECT * FROM users";
